@@ -1,0 +1,42 @@
+{
+  "name": "lcdlv",
+  "version": "1.0.0",
+  "description": "-",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "css-loader": "^6.7.1",
+    "rollup": "^2.45.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@comunica/query-sparql": "^2.2.1",
+    "@comunica/query-sparql-file": "^2.3.0",
+    "@cubejs-client/core": "^0.31.0",
+    "@influxdata/influxdb-client-apis": "^1.27.0",
+    "@influxdata/influxdb-client-browser": "^1.27.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "chart.js": "^3.9.1",
+    "cors": "^2.8.5",
+    "dxf-writer": "^1.15.1",
+    "flatpickr": "^4.6.13",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "stats.js": "^0.17.0",
+    "three": "^0.135.0",
+    "three-mesh-bvh": "^0.5.5",
+    "web-ifc": "0.0.35",
+    "web-ifc-three": "0.0.117",
+    "web-ifc-viewer": "^1.0.192"
+  }
+}

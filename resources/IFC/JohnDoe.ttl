@@ -1,0 +1,107 @@
+## This is John Doe, an inhabitant OFH the OpenFlat, an initiative by Alex Donkers. 
+## The OpenFlat can be used by researchers. More data is available on http://github.com/AlexDonkers/OpenFlat.
+## While the exact location cannot be shared due to GDPR-regulations, it is located in The Netherlands. Therefore, researchers can use average Dutch climate data.
+##
+
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# PREFIXES
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+@prefix OFH:   	<http://github.com/AlexDonkers/OpenFamilyHome#> .
+
+@prefix ofo:   	<https://w3id.org/ofo#> .							# Occupant Feedback Ontology
+@prefix opt:	<https://w3id.org/opt#> .							# Occupant Property Taxonomy
+@prefix foaf:	<http://xmlns.com/foaf/0.1/>	.					# Friend OFH A Friend
+
+@prefix owl:   	<http://www.w3.org/2002/07/owl#> .					# Web Ontology Language
+@prefix rdf:   	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .		# Resource Description Framework
+@prefix rdfs:  	<http://www.w3.org/2000/01/rdf-schema#> .			# RDF Schema
+@prefix prov:   <http://www.w3.org/ns/prov#> .						# PROV
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# JOHN DOE
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:JohnDoe
+		a							foaf:Person , ofo:Person , ofo:FeatureOFHInterest ;
+		
+		opt:hasName					"JohnDoe" ;
+		opt:hasBirthday				"01-01-1995" ;
+		opt:hasSex					"male" ;
+		opt:hasWeight				"80" ;
+		ofo:givesFeedback			OFH:JohnDoeVisualComfortFeedback ;
+		ofo:hasProperty				OFH:JohnDoeHeartRate , OFH:JohnDoeThermalComfort , OFH:JohnDoeAirQualityComfort .
+
+
+### PROPERTIES
+
+OFH:JohnDoeHeartRate
+		a							ofo:Property , opt:HeartRate ;
+		ofo:hasResult				OFH:JohnDoeHeartRateDataPoint .
+
+OFH:JohnDoeThermalComfort
+		a							ofo:Property , opt:ThermalComfort ;
+		ofo:hasResult				OFH:JohnDoeThermalComfortDataPoint .
+
+OFH:JohnDoeAirQualityComfort
+		a							ofo:Property , opt:AirQualityComfort ;
+		ofo:hasResult				OFH:JohnDoeAirQualityComfortDataPoint .
+
+OFH:JohnDoeSleepScore
+		a							ofo:Property , opt:SleepScore ;
+		ofo:hasResult				OFH:JohnDoeSleepScoreDataPoint .
+
+### FEEDBACK
+
+OFH:JohnDoeThermalComfortFeedback
+		a							ofo:Feedback ;
+		ofo:hasFeedbackResult		OFH:JohnDoeThermalComfortFeedbackDataPoint .
+		
+OFH:JohnDoeAirQualityComfortFeedback
+		a							ofo:Feedback ;
+		ofo:hasResult				OFH:JohnDoeAirQualityComfortFeedbackDataPoint .
+
+OFH:JohnDoeVisualComfortFeedback
+		a							ofo:Feedback ;
+		ofo:hasEvaluatedProperty	OFH:KitchenIlluminance ;
+		ofo:hasResult				[ ofo:hasValue "Like" ; prov:generatedAtTime "2023-02-25T17:00:00+01:00"^^xsd:dateTime ] ,
+									[ ofo:hasValue "Dislike" ; prov:generatedAtTime "2023-02-25T17:30:00+01:00"^^xsd:dateTime ] ,
+									[ ofo:hasValue "Dislike" ; prov:generatedAtTime "2023-02-25T18:00:00+01:00"^^xsd:dateTime ] ,
+									[ ofo:hasValue "Like" ; prov:generatedAtTime "2023-02-25T18:30:00+01:00"^^xsd:dateTime ] ,
+									[ ofo:hasValue "Like" ; prov:generatedAtTime "2023-02-25T19:00:00+01:00"^^xsd:dateTime ] ,
+									[ ofo:hasValue "Like" ; prov:generatedAtTime "2023-02-25T19:30:00+01:00"^^xsd:dateTime ] .
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# SMARTWATCH
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:FitbitOFHJohnDoe
+		a							ofo:Smartwatch , ofo:FeatureOFHInterest ;
+		ofo:isWornBy				OFH:JohnDoe ;
+		ofo:hasExternalDatabase		OFH:OpenFlatDB ;
+		ofo:executesOn				OFH:JohnDoeHeartRate , OFH:JohnDoeThermalComfort , OFH:JohnDoeAirQualityComfort , OFH:JohnDoeSleepScore;
+		ofo:monitorsFeedback		OFH:JohnDoeThermalComfortFeedback , OFH:JohnDoeAirQualityComfortFeedback , OFH:JohnDoeVisualComfortFeedback.
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# DATABASES
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:OpenFlatDB
+		a							ofo:Database ;
+		
+		ofo:hasDataPoint			OFH:JohnDoeHeartRateDataPoint , OFH:JohnDoeThermalComfortDataPoint , OFH:JohnDoeAirQualityComfortDataPoint , OFH:JohnDoeThermalComfortFeedbackDataPoint , OFH:JohnDoeAirQualityComfortFeedbackDataPoint , OFH:JohnDoeSleepScoreDataPoint.

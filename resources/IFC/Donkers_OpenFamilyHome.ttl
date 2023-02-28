@@ -1,0 +1,1698 @@
+## This is the OpenFamilyHome, an initiative by Alex Donkers. 
+## The OpenFamilyHome can be used by researchers. More data is available on http://github.com/AlexDonkers/OpenFamilyHome.
+## While the exact location cannot be shared due to GDPR-regulations, it is located in The Netherlands. Therefore, researchers can use average Dutch climate data.
+## 
+## This file is validated using the IDLab Turtle Validator (ttl.sumerofcode.be)
+##
+## OpenFamilyHome is licensed under CC BY-NC-SA 4.0 terms. 
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# PREFIXES
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+@prefix OFH:   	<http://github.com/AlexDonkers/OpenFamilyHome#> .
+
+@prefix bop:   	<https://w3id.org/bop#> .							# Building Performance Ontology
+@prefix bpt:   	<https://w3id.org/bpt#> .							# Building Property Taxonomy
+@prefix bot:   	<https://w3id.org/bot#> .							# Building Topology Ontology
+@prefix beo:   	<http://pi.pauwel.be/voc/buildingelement#> .		# Building Element Ontology
+@prefix mep:   	<http://pi.pauwel.be/voc/distributionelement#> .	# Distribution Elenemt Ontology
+@prefix geo:   	<http://www.opengis.net/ont/geosparql#> .			# GeoSPARQL
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .		# QUDT Quantity Kind ontology
+@prefix unit:	<http://qudt.org/2.1/vocab/unit/> .					# QUDT Unit ontology
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>	.			# SSN System ontology
+
+
+@prefix owl:   	<http://www.w3.org/2002/07/owl#> .					# Web Ontology Language
+@prefix rdf:   	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .		# Resource Description Framework
+@prefix rdfs:  	<http://www.w3.org/2000/01/rdf-schema#> .			# RDF Schema
+
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# SITE
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:OpenFamilyHomeSite
+        a                         	geo:Feature , bot:Site , bop:FeatureOfInterest ;
+		
+        bot:hasBuilding				OFH:OpenFamilyHome;
+		
+		bpt:hasGUID					"a690165a-a354-4e0f-9108-1ca3551131e4" ;
+		bpt:hasGlobalIdIfcRoot		"2ca1PQerHE3v487ADL4J7a" ;
+		bpt:hasName					"OpenFamilyHomeSite" ;
+		bpt:hasElevation			"0" ;
+		bpt:hasLocation				OFH:TheNetherlands .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# BUILDING
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:OpenFamilyHome
+        a              				bot:Building ;
+        bot:hasStorey  				OFH:Level1 , OFH:Level2 , OFH:Level3 ;
+        
+		bpt:hasGUID					"a690165a-a354-4e0f-9108-1ca3551131e7" ;
+		bpt:hasGlobalIdIfcRoot		"2ca1PQerHE3v487ADL4J7d" ;
+        bpt:hasName		            "OpenFamilyHome" ;
+		bpt:hasType					bpt:ResidentialBuilding .				
+				
+				
+				
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# LEVELS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+			
+OFH:Level1
+        a                    bot:Storey ;
+		
+        bot:containsElement  OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2faa , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3049 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02c3 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc330d , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc32eb , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc06e3 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc3dbc , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f94 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce5f4 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc00da , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3264 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3c7b , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02ba , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2d63 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce7c0 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce4f5 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0638 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc030e , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bcebc8 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3f01 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3674 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcea79 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce461 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc077f , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0178 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc36a1 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2cca , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f0f , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3f55 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0419 , OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bce3ef , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce8b7 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0275 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3cd6 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce519 ;
+        bot:hasSpace         OFH:Kitchen , OFH:LivingRoom , OFH:Hall1 , OFH:Toilet , OFH:Garage , OFH:Hall2 ;
+        			
+		bpt:hasGUID					"a690165a-a354-4e0f-9108-1ca3aaeecf21" ;
+		bpt:hasGlobalIdIfcRoot		"2ca1PQerHE3v487AEgxiyX" ;
+		bpt:hasName					"Level 1" ;
+		bpt:hasElevation			"0." .
+
+OFH:Level2
+        a                    bot:Storey ;
+		
+        bot:containsElement  OFH:slab_2dcaa902-d020-4843-a5cc-af0c40bc3919 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1654 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcf5b9 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc169a , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b32 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf , OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bc1ecc , OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc3925 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0baa , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0ced , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dc , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc100b , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0a82 , OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc3919 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc11fe , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bcfba2 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dd , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b50 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04d3 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1720 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1361 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcf5ac , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0eef , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1748 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1049 , OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a ;
+        bot:hasSpace         OFH:Bathroom , OFH:Bedroom3 , OFH:Bedroom1 , OFH:Hall3 , OFH:Bedroom2 ;
+        
+		bpt:hasGUID					"a690165a-a354-4e0f-9108-1ca3aaeecca0" ;
+		bpt:hasGlobalIdIfcRoot		"2ca1PQerHE3v487AEgxioW" ;
+		bpt:hasName					"Level 2" ;
+		bpt:hasElevation			"3000." .
+		
+OFH:Level3
+        a                    bot:Storey ;
+		
+        bot:containsElement  OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1805 , OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bce626 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1bee , OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc359a ;
+        bot:hasSpace         OFH:Attic ;
+				
+		bpt:hasGUID					"a690165a-a354-4e0f-9108-1ca3aaeb8ba1" ;
+		bpt:hasGlobalIdIfcRoot		"2ca1PQerHE3v487AEgwukX" ;
+		bpt:hasName					"Level 3" ;
+		bpt:hasElevation			"6000." .			
+
+
+			
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# SPACES
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+	
+OFH:LivingRoom
+        a       bot:Space ;
+
+		bpt:hasGUID					"5cc8b720-829a-44f7-9e15-b88a9526f4a7" ;
+		bpt:hasGlobalIdIfcRoot		"1SoBSWWff4zvuLk8gL9lId" ;
+		bpt:hasName			        "LivingRoom" ;
+		bpt:hasNumber				"1" .
+
+
+
+OFH:Kitchen
+        a       bot:Space ;
+		
+		bot:containsElement			OFH:KitchenTable ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcfbd2" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFlI" ;
+		bpt:hasName			        "Kitchen" ;
+		bpt:hasNumber				"2" .
+
+OFH:Hall1
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcfbd8" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFlO" ;
+		bpt:hasName			        "Hall1" ;
+		bpt:hasNumber				"3" .
+
+OFH:Toilet
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcfbdd" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFlT" ;
+		bpt:hasName			        "Toilet" ;
+		bpt:hasNumber				"4" .		
+		
+OFH:Hall2
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcfbdb" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFlR" ;
+		bpt:hasName			        "Hall2" ;
+		bpt:hasNumber				"5" .		
+				
+OFH:Garage
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcfbc6" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFl6" ;
+		bpt:hasName			        "Garage" ;
+		bpt:hasNumber				"6" .	
+		
+OFH:Bedroom1
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcf82e" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFWk" ;
+		bpt:hasName			        "Bedroom1" ;
+		bpt:hasNumber				"7" .
+
+OFH:Bedroom2
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcf822" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFWY" ;
+		bpt:hasName			        "Bedroom2" ;
+		bpt:hasNumber				"8" .
+
+OFH:Bedroom3
+        a       bot:Space ;
+		
+		bot:containsElement			OFH:Bedroom3Desk ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcf827" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFWd" ;
+		bpt:hasName			        "Bedroom3" ;
+		bpt:hasNumber				"9" .
+
+OFH:Bathroom
+        a       bot:Space ;
+
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcf824" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFWa" ;
+		bpt:hasName			        "Bathroom" ;
+		bpt:hasNumber				"10" .
+
+OFH:Hall3
+        a       bot:Space ;
+				
+		bpt:hasGUID					"2dcaa902-d020-4843-a5cc-af0e40bcf839" ;
+		bpt:hasGlobalIdIfcRoot		"0joga2q218GwNChmv0lFWv" ;
+		bpt:hasName			        "Hall3" ;
+		bpt:hasNumber				"11" .	
+		
+OFH:Attic
+        a       bot:Space ;
+
+		bpt:hasGUID					"5cc8b720-829a-44f7-9e15-b88a9526ca51" ;
+		bpt:hasGlobalIdIfcRoot		"1SoBSWWff4zvuLk8gL9ifH" ;
+		bpt:hasName			        "Attic" ;
+		bpt:hasNumber				"12" .	
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# ADJACENT ELEMENTS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+	
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2cca .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2d63 .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3264 .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3674 .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc36a1 .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Garage bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Hall2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3264 .
+OFH:Hall2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc32eb .
+OFH:Hall2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Hall2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc36a1 .
+OFH:Hall2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3674 .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9 .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98 .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f94 .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2faa .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f0f .
+OFH:Hall1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98 .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3049 .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f0f .
+OFH:Toilet bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f0f .
+OFH:Kitchen bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 .
+OFH:Kitchen bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3049 .
+OFH:Kitchen bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Kitchen bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Kitchen bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc330d .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9 .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1049 .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc100b .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0ced .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc11fe .
+OFH:Bedroom1 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc11fe .
+OFH:Bedroom2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 .
+OFH:Bedroom2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0ced .
+OFH:Bedroom2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Bedroom2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Bedroom2 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc330d .
+OFH:Bedroom3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc330d .
+OFH:Bedroom3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Bedroom3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf .
+OFH:Bedroom3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf .
+OFH:Bedroom3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1361 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bcfba2 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bcfba2 .
+OFH:Bathroom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9 .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98 .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1361 .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc100b .
+OFH:Hall3 bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1049 .
+OFH:LivingRoom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7 .
+OFH:LivingRoom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9 .
+OFH:LivingRoom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e .
+OFH:LivingRoom bot:adjacentElement OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# FURNITURE
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+### The Revit model contains no furniture.
+
+OFH:KitchenTable
+		a 						bot:Element , bop:FeatureOfInterest , bop:Platform .	
+
+OFH:Bedroom3Desk
+		a 						bot:Element , bop:FeatureOfInterest , bop:Platform .		
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# FLOORS AND ROOFS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bc1ecc
+        a                             beo:Floor , beo:Slab , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc1ecc" ;
+        bpt:hasBatID  			  	  "359655" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1xC" ;
+        bpt:hasName                   "Level2FloorSlab" ;
+
+		bpt:hasThermalResistance	  "0.4" ;
+		bpt:hasThickness			  "150" .			
+		
+OFH:slab_2dcaa902-d020-4843-a5cc-af0c40bc3919
+        a                             beo:Roof , beo:Slab , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0c40bc3919" ;
+        bpt:hasBatID 			 	  "351026" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmn0l3aP" ;
+        bpt:hasName                   "TerraceRoofSlab" ;
+
+		bpt:hasThermalResistance	  "0.4" ;
+		bpt:hasThickness			  "400" .
+		
+OFH:slab_2dcaa902-d020-4843-a5cc-af0c40bc3925
+        a                             beo:Roof , beo:Slab , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0c40bc3925" ;
+        bpt:hasBatID 				  "350990" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmn0l3ab" ;
+        bpt:hasName                   "GarageRoofSlab" ;
+
+		bpt:hasThickness			  "483" ;			
+		bpt:hasThermalResistance	  "6" .
+
+OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bce626
+        a                             beo:Floor , beo:Slab , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bce626" ;
+        bpt:hasBatID 			      "361485" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lEOc" ;
+        bpt:hasName                   "Level3Floor" ;
+		
+		bpt:hasThermalResistance	  "0.4" ;
+		bpt:hasThickness			  "150" .
+
+OFH:slab_2dcaa902-d020-4843-a5cc-af0e40bce3ef
+        a                             beo:Floor , beo:Slab , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bce3ef" ;
+        bpt:hasBatID 				  "360900" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lEFl" ;
+        bpt:hasName                	  "Level0Floor" ;
+		
+		bpt:hasThickness			  "490" ;			
+		bpt:hasThermalResistance	  "6" .
+		
+		
+OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc3925
+        a                             beo:Roof , bot:Element ;
+		
+        bot:hasSubElement             OFH:slab_2dcaa902-d020-4843-a5cc-af0c40bc3925 ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc3925" ;
+        bpt:hasBatID 				  "350990" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3ab" ;
+        bpt:hasName                   "GarageRoof" ;
+
+		bpt:hasThickness			  "483" ;			
+		bpt:hasThermalResistance	  "6" .
+	
+
+OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc3919
+        a                             beo:Roof , bot:Element ;
+		
+        bot:hasSubElement             OFH:slab_2dcaa902-d020-4843-a5cc-af0c40bc3919 ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc3919" ;
+        bpt:hasBatID 				  "351026" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3aP" ;
+        bpt:hasName                   "TerraceRoof" ;
+
+		bpt:hasThermalResistance	  "0.4" ;
+		bpt:hasThickness			  "400" .
+		
+OFH:roof_2dcaa902-d020-4843-a5cc-af0e40bc359a
+        a                             beo:Roof , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc359a" ;
+        bpt:hasBatID 				  "350129" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3MQ" ;
+        bpt:hasName                   "Level3Roof" ;
+		
+		bpt:hasThickness			  "483" ;			
+		bpt:hasThermalResistance	  "6" .				
+				
+
+				
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# WALLS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc36a1
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc3dbc ;
+        	
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc36a1" ;
+		bpt:hasGlobalIdIfcRoot		  "0joga2q218GwNChmv0l3QX" ;
+		bpt:hasBatID				  "349322" ;
+		
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3264
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0275 ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3264" ;
+        bpt:hasBatID  				  "348239" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l39a" ;
+		
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" .
+				
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bcfba2
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bcfba2" ;		
+        bpt:hasBatID  				  "366985" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lFkY" ;
+		
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+		
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3cd6
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3cd6" ;	
+        bpt:hasBatID  				  "351997" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3pM" ;
+		bpt:hasName					  "CarportColumn" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+		
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1049
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc1049" ;	
+        bpt:hasBatID  				  "356962" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l119" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2cca
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce8b7 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bcebc8 ;
+        
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2cca" ;
+		bpt:hasBatID                  "347873" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2pA" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" .  			
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3049
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3049" ;
+        bpt:hasBatID                  "348770" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l319" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" .		
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f0f
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02ba ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2f0f" ;
+        bpt:hasBatID                  "347428" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2yF" ;
+		
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 		
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc13bf
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1654 ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc13bf" ;
+        bpt:hasBatID                  "356756" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1E$" ;
+		
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 		
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc330d
+        a                             bot:Element , beo:Wall ;
+        bot:hasSubElement             OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce4f5 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce519 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b32 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce5f4 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcea79 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce461 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b50 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1bee , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce7c0 ;
+        
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc330d" ;
+		bpt:hasBatID                  "348454" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3CD" ;
+	
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 	
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2b98
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0419 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0a82 , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc030e ;
+        
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2b98" ;
+		bpt:hasBatID                  "346547" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2kO" ;
+	
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 		
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3f01
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3f01" ;
+        bpt:hasBatID                  "351530" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3y1" ;	
+		bpt:hasName					  "TerraceColumnLeft" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3674
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3674" ;
+        bpt:hasBatID                  "349279" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3Pq" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 		
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3354
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0baa , OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0178 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0eef ;
+        
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3354" ;
+		bpt:hasBatID                  "348543" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3DK" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 		
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3f55
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3f55" ;
+        bpt:hasBatID                  "351614" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3zL" ;
+
+		bpt:hasName					  "TerraceColumnRight" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc1361
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1748 ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc1361" ;
+        bpt:hasBatID                  "356682" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1DX" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 			
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2d63
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2d63" ;
+        bpt:hasBatID                  "347976" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2rZ" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 		
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2e4e
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02c3 ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2e4e" ;
+        bpt:hasBatID                  "347237" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2vE" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 				
+				
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc25e9
+        a                             bot:Element , beo:Wall ;
+        bot:hasSubElement             OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1805 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dc , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc077f , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc06e3 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0638 , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dd , OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04d3 ;
+        
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc25e9" ;
+		bpt:hasBatID                  "346050" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2Nf" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0ced
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc0ced" ;
+        bpt:hasBatID                  "356038" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0pj" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 				
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc32eb
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc32eb" ;
+        bpt:hasBatID                  "348352" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3Bh" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc11fe
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc11fe" ;
+        bpt:hasBatID                  "357333" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l17_" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 	
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc100b
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1720 ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc100b" ;
+        bpt:hasBatID                  "356896" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l10B" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc0c1a
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc169a ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc0c1a" ;
+        bpt:hasBatID                  "355889" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0mQ" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc3c7b
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc3c7b" ;
+        bpt:hasBatID                  "351824" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l3nx" ;
+		bpt:hasName					  "TerraceColumnMiddle" ;
+
+		bpt:isExterior				  "True" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "0.2" .
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc12ea
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc12ea" ;
+        bpt:hasBatID                  "356545" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1Bg" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2faa
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2faa" ;
+        bpt:hasBatID                  "347521" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2_g" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc24c7
+        a                             beo:Wall , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc24c7" ;
+        bpt:hasBatID                  "345836" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2J7" ;
+		bpt:hasName					  "House-DividingWall" ;
+
+		bpt:isExterior				  "False" ;
+		bpt:hasLength				  "" ;
+		bpt:hasThickness			  "" ;			
+		bpt:hasHeight				  "" ;
+		bpt:hasThermalResistance	  "4.1753" .
+
+OFH:wall_2dcaa902-d020-4843-a5cc-af0e40bc2f94
+        a                             beo:Wall , bot:Element ;
+        bot:hasSubElement             OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc00da ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc2f94" ;
+        bpt:hasBatID                  "347583" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l2_K" ;
+
+		bpt:isExterior  			  "False" ;
+		bpt:hasLength	  			  "" ;
+		bpt:hasThickness	  		  "" ;			
+		bpt:hasHeight			  	  "" ;
+		bpt:hasThermalResistance	  "0.2" . 
+		
+				
+	
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Doors
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+			
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc00da
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc00da" ;
+	    bpt:hasBatID                "353009" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l03Q" ;
+		
+		bpt:hasLength				"813" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" . 
+
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce461
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bce461" ;
+        bpt:hasBatID                "362058" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0lEHX" ;
+		
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"True" ;
+		bpt:hasThermalResistance	"0.5" . 
+
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0275
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc0275" ;
+        bpt:hasBatID                "352350" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l09r" ;
+		
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" . 		
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc169a
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bc169a" ;
+        bpt:hasBatID                "357553" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l1QQ" ;
+		
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .		
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc3dbc
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc3dbc" ;
+        bpt:hasBatID                "352151" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l3sy" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .		
+							
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02c3
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				    "2dcaa902-d020-4843-a5cc-af0e40bc02c3" ;
+        bpt:hasBatID                "352488" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l0B3" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .				
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc0178
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc0178" ;
+        bpt:hasBatID                "353107" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l05u" ;
+ 				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .					
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1748
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc1748" ;
+        bpt:hasBatID                "357731" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l1T8" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .						
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce7c0
+        a                           beo:Door , bot:Element ;
+	
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bce7c0" ;
+        bpt:hasBatID                "361963" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0lEV0" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"True" ;
+		bpt:hasThermalResistance	"0.5" . 	
+
+
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc030e
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc030e" ;
+        bpt:hasBatID                "352549" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l0CE" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"True" ;
+		bpt:hasThermalResistance	"0.5" . 				
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc02ba
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc02ba" ;
+        bpt:hasBatID                "352401" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l0Aw" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .		
+
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1654
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc1654" ;
+        bpt:hasBatID                "357503" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l1PK" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .						
+				
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bc1720
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bc1720" ;
+        bpt:hasBatID                "357643" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0l1SW" ;
+				
+		bpt:hasLength				"915" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"False" ;
+		bpt:hasThermalResistance	"0.1" .
+		
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bce8b7
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	"2dcaa902-d020-4843-a5cc-af0e40bce8b7" ;
+        bpt:hasBatID                "363164" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0lEYt" ;
+        bpt:hasName                 "GarageDoor1" ;
+										
+		bpt:hasLength				"1200" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"True" ;
+		bpt:hasThermalResistance	"0.5" . 	
+		
+OFH:door_2dcaa902-d020-4843-a5cc-af0e40bcebc8
+        a                           beo:Door , bot:Element ;
+		
+		bpt:hasGUID				  	  "2dcaa902-d020-4843-a5cc-af0e40bcebc8" ;
+        bpt:hasBatID                "362979" ;
+        bpt:hasGlobalIdIfcRoot      "0joga2q218GwNChmv0lEl8" ;
+        bpt:hasName                 "GarageDoor2" ;
+										
+		bpt:hasLength				"1200" ;
+		bpt:hasThickness			"51" ;			
+		bpt:hasHeight				"2134" ;
+		bpt:isExterior  			"True" ;
+		bpt:hasThermalResistance	"0.5" . 				
+
+
+				
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# WINDOWS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################			
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce5f4
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bce5f4" ;
+        bpt:hasBatID  				  "362463" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lENq" ;
+
+        bpt:hasHeight                 "2210."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0eef
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc0eef" ;
+        bpt:hasBatID                  "355524" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0xl" ;
+
+        bpt:hasHeight                "1220."^^xsd:double ;
+        bpt:hasLength                "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce519
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bce519" ;
+        bpt:hasBatID                  "362290" ;
+		bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lEKP" ;
+
+        bpt:hasHeight                 "2210."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1805
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc1805" ;
+        bpt:hasBatID                  "358958" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1W5" ;
+
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1bee
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc1bee" ;
+        bpt:hasBatID                  "358853" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1lk" ;
+		
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04d3
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc04d3" ;
+        bpt:hasBatID                  "354040" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0JJ" ;
+
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0419
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc0419" ;
+        bpt:hasBatID                  "353842" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0GP" ;
+
+        bpt:hasHeight                 "609.999999999999"^^xsd:double ;
+        bpt:hasLength                 "406."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b50
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc1b50" ;
+        bpt:hasBatID                  "358779" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1jG" ;
+		
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0638
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc0638" ;
+        bpt:hasBatID                  "353299" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0Ou" ;
+
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc077f
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc077f" ;
+        bpt:hasBatID                  "353620" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0T$" ;
+
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dd
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc04dd" ;
+        bpt:hasBatID  				  "354038" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0JT" ;
+
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc06e3
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc06e3" ;
+        bpt:hasBatID                  "353480" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0RZ" ;
+
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0a82
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc0a82" ;
+        bpt:hasBatID                  "354473" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0g2" ;
+
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc04dc
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc04dc" ;
+        bpt:hasBatID                  "354039" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0JS" ;
+        
+        bpt:hasHeight                 "1830."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc1b32
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc1b32" ;
+        bpt:hasBatID                  "358681" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l1io" ;
+        
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "915."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcf5b9
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bcf5b9" ;
+        bpt:hasBatID                  "366482" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lFMv" ;
+        
+        bpt:hasHeight                 "577.800000000001"^^xsd:double ;
+        bpt:hasLength                 "2054.5376829666"^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcea79
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bcea79" ;
+        bpt:hasBatID                  "362578" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lEfv" ;
+        
+        bpt:hasHeight                 "2210."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bc0baa
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bc0baa" ;
+        bpt:hasBatID                  "354689" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0l0kg" ;
+        
+        bpt:hasHeight                 "1220."^^xsd:double ;
+        bpt:hasLength                 "914.999999999999"^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bce4f5
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bce4f5" ;
+        bpt:hasBatID                  "362206" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lEJr" ;
+        
+        bpt:hasHeight                 "2210."^^xsd:double ;
+        bpt:hasLength                 "610."^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+OFH:window_2dcaa902-d020-4843-a5cc-af0e40bcf5ac
+        a                             beo:Window , bot:Element ;
+		
+		bpt:hasGUID					  "2dcaa902-d020-4843-a5cc-af0e40bcf5ac" ;
+        bpt:hasBatID                  "366471" ;
+        bpt:hasGlobalIdIfcRoot        "0joga2q218GwNChmv0lFMi" ;
+        
+        bpt:hasHeight                 "577.800000000001"^^xsd:double ;
+        bpt:hasLength                 "2054.5376829666"^^xsd:double ;
+		bpt:isExterior				  "True" ;
+		bpt:hasThermalResistance	  "0.5" .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# SENSORS
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################			
+
+OFH:KitchenTemperatureSensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenTemperatureSensor" ;
+		
+		bop:observes					OFH:KitchenTemperature ;
+		bop:isHostedBy					OFH:KitchenTable ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekRHT10-D_TemperatureAccuracy , OFH:EltekRHT10-D_TemperatureRange , OFH:EltekRHT10-D_TemperatureResolution , OFH:EltekRHT10-D_TemperatureFrequency .
+			
+		
+
+OFH:KitchenRelativeHumiditySensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenRelativeHumiditySensor" ;
+		
+		bop:observes					OFH:KitchenRelativeHumidity ;
+		bop:isHostedBy					OFH:KitchenTable ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekRHT10-D_RelativeHumidityAccuracy , OFH:EltekRHT10-D_RelativeHumidityRange , OFH:EltekRHT10-D_RelativeHumidityResolution , OFH:EltekRHT10-D_RelativeHumidityFrequency .	
+		
+OFH:KitchenAirQualitySensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenAirQualitySensor" ;
+		
+		bop:observes					OFH:KitchenAirQuality ;
+		bop:isHostedBy					OFH:KitchenTable ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekGD47AC_IndoorAirQualityResolution , OFH:EltekGD47AC_IndoorAirQualityFrequency .
+		
+OFH:KitchenCO2Sensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenCO2Sensor" ;
+		
+		bop:observes					OFH:KitchenCO2 ;
+		bop:isHostedBy					OFH:KitchenTable ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekGD47_CO2Resolution , OFH:EltekGD47_CO2Frequency .
+
+OFH:KitchenSoundPressureLevelSensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenSoundPressureLevelSensor" ;
+		
+		bop:observes					OFH:KitchenSoundPressureLevel ;
+		bop:isHostedBy					OFH:KitchenTable ;
+		
+		ssn-system:hasSystemProperty 	OFH:PCE-353N_SoundPressureLevelResolution , OFH:PCE-353N_SoundPressureLevelFrequency .
+		
+OFH:KitchenIlluminanceSensor1
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenIlluminanceSensor1" ;
+		
+		bop:observes					OFH:KitchenIlluminance ;
+		bop:isHostedBy					OFH:KitchenTable ; 		
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency ;
+		
+		bpt:hasXYZ						"(-13.59 1.09 0.77)" .
+
+OFH:KitchenIlluminanceSensor2
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenIlluminanceSensor2" ;
+		
+		bop:observes					OFH:KitchenIlluminance ;
+		bop:isHostedBy					OFH:KitchenTable ; 		
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency ;
+
+		bpt:hasXYZ						"(-13.49 1.00 0.77)" .		
+
+OFH:KitchenIlluminanceSensor3
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenIlluminanceSensor3" ;
+		
+		bop:observes					OFH:KitchenIlluminance ;
+		bop:isHostedBy					OFH:KitchenTable ; 		
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency ;
+
+		bpt:hasXYZ						"(-14.49 -1.00 0.77)" .		
+
+OFH:KitchenIlluminanceSensor4
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenIlluminanceSensor4" ;
+		
+		bop:observes					OFH:KitchenIlluminance ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency ;
+
+		bpt:hasXYZ						"(-11.32 -2.55 0.77)" .	
+
+OFH:KitchenIlluminanceSensor5
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"KitchenIlluminanceSensor5" ;
+		
+		bop:observes					OFH:KitchenIlluminance ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency ;
+
+		bpt:hasXYZ						"(-11.32 -2.55 2.00)" .	
+		
+OFH:Bedroom3TemperatureSensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3TemperatureSensor" ;
+		
+		bop:observes					OFH:Bedroom3Temperature ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekRHT10-D_TemperatureAccuracy , OFH:EltekRHT10-D_TemperatureRange , OFH:EltekRHT10-D_TemperatureResolution , OFH:EltekRHT10-D_TemperatureFrequency .
+				
+OFH:Bedroom3RelativeHumiditySensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3RelativeHumiditySensor" ;
+		
+		bop:observes					OFH:Bedroom3RelativeHumidity ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekRHT10-D_RelativeHumidityAccuracy , OFH:EltekRHT10-D_RelativeHumidityRange , OFH:EltekRHT10-D_RelativeHumidityResolution , OFH:EltekRHT10-D_RelativeHumidityFrequency .
+				
+OFH:Bedroom3AirQualitySensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+			
+		bpt:hasName						"Bedroom3AirQualitySensor" ;
+		
+		bop:observes					OFH:Bedroom3AirQuality ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekGD47AC_IndoorAirQualityResolution , OFH:EltekGD47AC_IndoorAirQualityFrequency .
+			
+OFH:Bedroom3CO2Sensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3CO2Sensor" ;
+		
+		bop:observes					OFH:Bedroom3CO2 ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekGD47_CO2Resolution , OFH:EltekGD47_CO2Frequency .
+
+OFH:Bedroom3SoundPressureLevelSensor
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3SoundPressureLevelSensor" ;
+		
+		bop:observes					OFH:Bedroom3SoundPressureLevel ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:PCE-353N_SoundPressureLevelResolution , OFH:PCE-353N_SoundPressureLevelFrequency .
+				
+OFH:Bedroom3IlluminanceSensor1				
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3IlluminanceSensor1" ;
+		
+		bop:observes					OFH:Bedroom3Illuminance ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency .
+
+OFH:Bedroom3IlluminanceSensor2				
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"Bedroom3IlluminanceSensor2" ;
+		
+		bop:observes					OFH:Bedroom3Illuminance ;
+		bop:isHostedBy					OFH:Bedroom3Desk ; 		
+		
+		ssn-system:hasSystemProperty 	OFH:EltekLS50_IlluminanceResolution , OFH:EltekLS50_IlluminanceFrequency .
+		
+		
+						
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# DYNAMIC PROPERTIES
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:KitchenTemperature
+		a							bop:Property , bpt:Temperature , quantitykind:Temperature ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenTemperatureDataPoint .
+		
+OFH:KitchenRelativeHumidity
+		a							bop:Property , bpt:RelativeHumidity , quantitykind:RelativeHumidity ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenRelativeHumidityDataPoint .
+
+OFH:KitchenAirQuality
+		a							bop:Property , bpt:AirQuality ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenAirQualityDataPoint .
+
+OFH:KitchenCO2
+		a							bop:Property , bpt:CO2 ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenCO2DataPoint .
+		
+OFH:KitchenIlluminance
+		a							bop:Property , bpt:Illuminance ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenIlluminanceDataPoint .
+
+OFH:KitchenSoundPressureLevel
+		a							bop:Property , bpt:SoundPressureLevel ;
+		bop:isPropertyOf			OFH:Kitchen ;
+		bop:hasPropertyState		OFH:KitchenSoundPressureLevelDataPoint .
+			
+OFH:Bedroom3Temperature
+		a							bop:Property , bpt:Temperature , quantitykind:Temperature ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3TemperatureDataPoint .
+		
+OFH:Bedroom3RelativeHumidity
+		a							bop:Property , bpt:RelativeHumidity , quantitykind:RelativeHumidity ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3RelativeHumidityDataPoint .
+
+OFH:Bedroom3AirQuality
+		a							bop:Property , bpt:AirQuality ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3AirQualityDataPoint .
+
+OFH:Bedroom3CO2
+		a							bop:Property , bpt:CO2 ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3CO2DataPoint .
+		
+OFH:Bedroom3Illuminance
+		a							bop:Property , bpt:Illuminance , quantitykind:Illuminance ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3IlluminanceDataPoint .	
+
+OFH:Bedroom3SoundPressureLevel
+		a							bop:Property , bpt:SoundPressureLevel ;
+		bop:isPropertyOf			OFH:Bedroom3 ;
+		bop:hasPropertyState		OFH:Bedroom3SoundPressureLevelDataPoint .	
+
+		
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# DATABASE
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:OpenFamilyHomeDB
+		a							bop:Database ;
+		bop:hasDataPoint			OFH:KitchenTemperatureDataPoint , OFH:KitchenRelativeHumidityDataPoint , OFH:KitchenAirQualityDataPoint , OFH:KitchenCO2DataPoint , OFH:KitchenIlluminanceDataPoint , OFH:Bedroom3TemperatureDataPoint , OFH:Bedroom3RelativeHumidityDataPoint , OFH:Bedroom3AirQualityDataPoint , OFH:Bedroom3CO2DataPoint , OFH:Bedroom3IlluminanceDataPoint .
+
+OFH:KitchenTemperatureDataPoint 
+		bop:hasUnit					unit:DEG_C .
+
+OFH:KitchenRelativeHumidityDataPoint 
+		bop:hasUnit					unit:PERCENT .
+		
+OFH:KitchenAirQualityDataPoint 
+		bop:hasUnit					unit:V .
+		
+OFH:KitchenCO2DataPoint 
+		bop:hasUnit					unit:V .
+		
+OFH:KitchenIlluminanceDataPoint 
+		bop:hasUnit					unit:LUX .
+		
+OFH:KitchenSoundPressureLevelDataPoint 
+		bop:hasUnit					unit:DB .		
+		
+OFH:Bedroom3TemperatureDataPoint 
+		bop:hasUnit					unit:DEG_C .
+		
+OFH:Bedroom3RelativeHumidityDataPoint 
+		bop:hasUnit					unit:PERCENT .
+		
+OFH:Bedroom3AirQualityDataPoint 
+		bop:hasUnit					unit:V .
+		
+OFH:Bedroom3CO2DataPoint 
+		bop:hasUnit					unit:V .
+		
+OFH:Bedroom3IlluminanceDataPoint 
+		bop:hasUnit					unit:LUX .
+
+OFH:Bedroom3SoundPressureLevelDataPoint 
+		bop:hasUnit					unit:DB .
+		
+			
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# System properties
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+	
+OFH:EltekRHT10-D_TemperatureResolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.1" .
+
+OFH:EltekRHT10-D_TemperatureRange
+		a								ssn-system:Range, bop:Property ;
+		bop:hasSimpleMinimum			"-40" ;
+		bop:hasSimpleMaximum			"85" .
+
+OFH:EltekRHT10-D_TemperatureAccuracy
+		a								ssn-system:Accuracy, bop:Property ;
+		bop:hasSimpleResult 			"0.4" .		
+
+OFH:EltekRHT10-D_TemperatureFrequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .
+
+OFH:EltekRHT10-D_RelativeHumidityResolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.1" .
+		
+OFH:EltekRHT10-D_RelativeHumidityRange
+		a								ssn-system:Range, bop:Property ;
+		bop:hasSimpleMinimum			"0" ;
+		bop:hasSimpleMaximum			"100" .
+				
+OFH:EltekRHT10-D_RelativeHumidityAccuracy
+		a								ssn-system:Accuracy, bop:Property ;
+		bop:hasSimpleResult				"2" .
+
+OFH:EltekRHT10-D_RelativeHumidityFrequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .
+		
+		
+		
+OFH:EltekGD47_CO2Resolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.5" .
+
+OFH:EltekGD47_CO2Frequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .		
+		
+		
+		
+OFH:EltekGD47AC_IndoorAirQualityResolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.001" .
+
+OFH:EltekGD47AC_IndoorAirQualityFrequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .	
+		
+		
+
+OFH:EltekLS50_IlluminanceResolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.1" .
+
+OFH:EltekLS50_IlluminanceFrequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .	
+		
+		
+		
+OFH:PCE-353N_SoundPressureLevelResolution
+		a								ssn-system:Resolution, bop:Property ;
+		bop:hasSimpleResult				"0.01" .
+		
+OFH:PCE-353N_SoundPressureLevelFrequency
+		a								ssn-system:Frequency, bop:Property ;
+		bop:hasResult 					[ a bop:Result ;
+											bop:hasValue		"60" ;
+											bop:hasUnit 			unit:PER-HR ] .	
+											
+														
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Devices
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+OFH:LightingSystem_01
+		a								bop:Actuator, bot:Element, mep:LED ;
+		
+		bpt:hasName						"Bedroom3Lamp" ;
+		
+        bpt:hasBatID                  "377253" ;
+        bpt:hasGlobalIdIfcRoot        "2XDXpkc$DAY9KlisbdYv_m" ;
+		
+		bop:actsOn						OFH:LivingRoom_Illuminance ;
+		bop:isHostedBy					OFH:Bedroom3Desk ;
+		
+		bop:hasIPAdress					"192.168.68.113" .

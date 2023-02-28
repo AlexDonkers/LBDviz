@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+#topbar {
+    top: 0px;
+    margin: 1rem;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+
+#optionbar {
+    margin: 1rem;
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: green;
+    padding: 5px;
+    position: relative;
+    z-index:2;
+}
+
+#querybar {
+    margin: 1rem;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: green;
+    padding: 5px;
+    position: relative;
+    z-index:2;
+}
+
+#resultsbar {
+    margin: 1rem;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: green;
+    padding: 5px;
+    position: relative;
+    z-index:2;
+}
+
+#logobar {
+    margin: 1rem;
+    bottom: 0; 
+    right: 0;
+    width: 260px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;
+    position: absolute;
+    z-index:2;
+}
+
+#energybar {
+  font-family: "AvenirNext-Regular";
+  font-size: 12px;
+  text-align: right;
+  color:white;
+
+  margin: 1rem;
+  top: 0; 
+  right: 0;
+  width: 300px;
+  height: 110px;
+  border-radius: 5px;
+  background-color: green;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+}
+#energybar table{
+  width:100%;
+}
+#energybar tr:hover {
+  background-color: #ff0072;
+  color:white;
+
+}
+
+
+
+#project-name {
+    text-transform: uppercase;
+}
+#selected-guid {
+    font-family: "AvenirNext-Regular";
+    font-size: 12px;
+    vertical-align:middle;
+    color:white
+}
+
+.header-text {
+    font-family: "AvenirNext-Bold";
+    font-size: 50px;
+    color: white;
+    padding-left: 20px;
+    vertical-align:top;
+}
+.header-text-handwritten {
+    font-family: "MONSTERA";
+    font-size: 40px;
+    color: #ff0072;
+    vertical-align:middle;
+}
+.menu-header-text {
+    font-family: "AvenirNext-Bold";
+    font-size: 12px;
+    color: white;
+}
+.menu-text {
+    font-family: "AvenirNext-Regular";
+    font-size: 10px;
+    color: white;
+    padding-left: 20px;
+    vertical-align:top;
+}
+#canvas {
+    width: 100px;
+}
+
+@font-face {
+    font-family: "MONSTERA";
+    src: url('../resources/MONSTERA.ttf')
+}
+@font-face {
+    font-family: "AvenirNext-Bold";
+    src: url('../resources/AvenirNext-Bold.ttf')
+}
+@font-face {
+    font-family: "AvenirNext-Regular";
+    src: url('../resources/AvenirNext-Regular.ttf')
+}
+
+
+
+
+.hidden {
+    visibility: collapse;
+}
+
+html, body {
+    overflow: hidden;
+}
+.menu-text:hover {
+    background-color: #ff0072;
+}
+.loading-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-progress {
+    color: #ff0072;
+    font-family: "MONSTERA";
+    font-size: 100px;
+}
+
+.floating-top {
+    position: absolute;
+    top: 1rem;
+    z-index: 10000;
+    left: 4rem;
+}
+
+.floating-top label {
+    margin-right: 0.5em;
+}
+.ifcjs-dimension-preview {
+    width: 1rem;
+    height: 1rem;
+    background-color: #FFA50F;
+    border-radius: 1rem;
+    opacity: 0.5;
+}
+
+.ifcjs-dimension-label {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion {
+    z-index: 2;
+    margin-left: 1rem;
+    
+    border-radius: 5px;
+    position: relative;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px;
+    width: 700px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: "AvenirNext-Bold";
+    font-size: 12px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ff0072;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .accordion.active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    position: relative;
+    z-index: 2;
+    margin-left: 1rem;
+    border-radius: 5px;
+    background-color: green;
+    font-family: "AvenirNext-Regular";
+    color: white;
+    padding: 0 18px;
+    max-height: 0;
+    width: 700px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 12px;
+  }
+
+  .SPARQL-input{
+    width: 100%;
+  }
+
+
+
+
+  
+/* Style the tab */
+.tab {
+    overflow: hidden;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: 0.3s;
+    font-size: 12px;
+    font-family: "AvenirNext-Bold";
+    color: white;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ff0072;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+
+    border-top: none;
+  }
+
+
+/* Style the tab */
+.optionstab {
+    overflow: hidden;
+  }
+  
+  /* Style the buttons inside the tab */
+  .optionstab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: 0.3s;
+    font-size: 12px;
+    font-family: "AvenirNext-Bold";
+    color: white;
+  }
+  
+  /* Change background color of buttons on hover */
+  .optionstab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .optionstab button.active {
+    background-color: #ff0072;
+  }
+  
+  /* Style the tab content */
+  .optionstabcontent {
+    display: none;
+    padding: 6px 12px;
+
+    border-top: none;
+  }
+
+
+
+
+
+  textarea {
+    border-color: transparent;
+    background-image: linear-gradient(white,#E2F0D9);
+    font-size: 12px;
+    font-family: "AvenirNext-Regular"
+  }
+
+  input[type=button],
+      input[type=submit] {
+        background-color: #ff0072;
+        float: right;
+
+        border: none;
+        color: #fff;
+        font-size: 12px;
+        padding: 6px 10px;
+        font-family: "AvenirNext-Bold";
+        color: white;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+
+    .options-button {
+        background-color: inherit;
+        border: none;
+        padding: 6px 10px;
+        transition: 0.3s;
+        font-size: 12px;
+        font-family: "AvenirNext-Regular";
+        color: white;
+
+    }
+    .options-button:hover {
+        background-color: #ff0072;
+    }
+
+    .find-button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 6px 10px;
+        transition: 0.3s;
+        font-size: 12px;
+        font-family: "AvenirNext-Regular";
+        color: white;
+        vertical-align: middle;
+    }
+    .find-button:hover {
+        background-color: #ff0072;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+#file-input{
+    z-index: 1;
+    position: absolute;
+}
+
+.checkboxes {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 3;
+}
+
+
+
+.switch {
+    position: relative;
+
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ff0072;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ff0072;
+  }
+  
+  input:checked + .slider:before {
+    background-color: white;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+a {
+    text-decoration: none;
+    font-family: "AvenirNext-Regular";
+    font-size: 12px;
+    color: white;
+}
+
+a:hover {
+    color:#ff0072;
+}
