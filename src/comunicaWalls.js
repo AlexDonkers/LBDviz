@@ -5,14 +5,12 @@ export async function queryComunicaWalls() {
   const myEngine = new QueryEngine();
 
   const graphs = document.getElementById("GRAPH-input").value.split(',')
-  const query = `PREFIX beo: <http://pi.pauwel.be/voc/buildingelement#> 
+  const bindingsStream = await myEngine.queryBindings(`PREFIX beo: <http://pi.pauwel.be/voc/buildingelement#> 
   PREFIX bpt: <https://w3id.org/bpt#> 
   select * where { 
     ?wall a beo:Wall .
     ?wall bpt:hasGlobalIdIfcRoot ?GlobalId
-  } limit 100 `
-  document.getElementById("SPARQL-input").innerHTML = query
-  const bindingsStream = await myEngine.queryBindings(query, {
+  } limit 100 `, {
     sources: graphs,
   });
 
@@ -45,7 +43,7 @@ export async function queryComunicaWalls() {
       }
       if (results[x][1].termType !== "Literal") {
         console.log(results[x][0] +": "+ results[x][1].value.split("#", 2)[1])
-        tableContent += "<td><a target='_blank' href='"+results[x][1].value+"'>"+results[x][1].value.split("#", 2)[1]+"</a></td>"
+        tableContent += "<td>"+results[x][1].value.split("#", 2)[1]+"</td>"
       }
     }
     tableContent += "</tr>"

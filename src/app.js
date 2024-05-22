@@ -3,19 +3,18 @@ import { MeshBasicMaterial, LineBasicMaterial, Color, Mesh, BoxGeometry } from '
 import { ClippingEdges } from 'web-ifc-viewer/dist/components/display/clipping-planes/clipping-edges';
 import { IFCSPACE, IFCOPENINGELEMENT, IFCFURNISHINGELEMENT, IFCWALL, IFCWINDOW, IFCCURTAINWALL, IFCMEMBER, IFCPLATE, IFCWALLSTANDARDCASE, IFCDOOR, IFCSLAB, IfcWindowStandardCase } from 'web-ifc';
 import { CSS2DRenderer , CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-import _ from 'lodash';
 
 // Functions
 import { queryComunica } from './comunica.js'
 import { queryComunicaProjectName } from './comunicaProjectName.js'
 import { queryComunicaWalls } from './comunicaWalls.js'
 import { queryComunicaGlobalIdProps } from './comunicaGlobalIdProps.js'
+import { consoleLogger } from '@influxdata/influxdb-client-browser';
 
 queryComunicaProjectName();
 
 const container = document.getElementById('viewer-container');
-const viewerColor = new Color('#E2F0D9');
-const viewer = new IfcViewerAPI({ container, backgroundColor: viewerColor });
+const viewer = new IfcViewerAPI({ container, backgroundColor: new Color('#E2F0D9') });
 viewer.axes.setAxes();
 viewer.shadowDropper.darkness = 1.5;
 
@@ -120,6 +119,7 @@ window.onclick = async () => {
 };
 viewer.clipper.active=true;
 
+
 window.onkeydown = (event) => {
     if(event.code === 'KeyP') {
         viewer.clipper.createPlane();
@@ -127,20 +127,21 @@ window.onkeydown = (event) => {
     else if(event.code === 'KeyO') {
         viewer.clipper.deletePlane();
     }
-    else if(event.code === 'KeyT') {
-        viewer.clipper.toggle();
-    }
-
     else if(event.code === 'KeyQ') {
-      queryComunica();
+      queryComunica()
     }        
     else if(event.code === 'KeyW') {
       queryComunicaWalls()
     }  
-    else if(event.code === 'KeyT') {
-      queryComunicaGlobalIdProps()
-    }  
- 
+    else if(event.code === 'KeyI') {
+      queryInflux()
+    }
+    else if(event.code === 'KeyS') {
+      queryInfluxSensorData()
+    }
+    else if(event.code === 'KeyR') {
+      queryInfluxSensorDataInSelectedRoom()
+    }
 };
 
 
@@ -205,7 +206,9 @@ document.getElementById("defaultOpen").click();
 
 
 
-// Chart
+
+
+
 
 
 
@@ -222,14 +225,3 @@ export async function pick() {
     document.getElementById("sensor-data-box-content").innerHTML = JSON.stringify(props);
 }
 window.pick = pick;
-
-
-// toggle
-
-
-function toggleDarkMode() {
-  var element = document.getElementById("viewer-container");
-  element.classList.toggle("viewer-container-dark-mode");
-}
-window.toggleDarkMode = toggleDarkMode;
-document.getElementById("dark-mode-toggle").click();

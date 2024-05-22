@@ -38,7 +38,7 @@ export async function queryComunica() {
       }
       if (results[x][1].termType !== "Literal") {
         console.log(results[x][0] +": "+ results[x][1].value.split("#", 2)[1])
-        tableContent += "<td><a target='_blank' href='"+results[x][1].value+"'>"+results[x][1].value.split("#", 2)[1]+"</a></td>"
+        tableContent += "<td>"+results[x][1].value.split("#", 2)[1]+"</td>"
       }
     }
     tableContent += "</tr>"

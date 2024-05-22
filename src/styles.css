@@ -19,7 +19,6 @@ html, body {
     overflow: hidden;
 }
 
-
 #topbar {
     top: 0px;
     margin: 1rem;
@@ -29,8 +28,6 @@ html, body {
     position: relative;
     z-index: 2;
 }
-
-
 #optionbar {
     margin: 1rem;
     width: 500px;
@@ -77,40 +74,12 @@ html, body {
     z-index:2;
 }
 
-#energybar {
-  font-family: "AvenirNext-Regular";
-  font-size: 12px;
-  text-align: right;
-  color:white;
-
-  margin: 1rem;
-  top: 0; 
-  right: 0;
-  width: 300px;
-  height: 110px;
-  border-radius: 5px;
-  background-color: green;
-  padding: 5px;
-  position: absolute;
-  z-index:2;
-}
-#energybar table{
-  width:100%;
-}
-#energybar tr:hover {
-  background-color: #ff0072;
-  color:white;
-
-}
-
-
-
 #project-name {
     text-transform: uppercase;
 }
 #selected-guid {
     font-family: "AvenirNext-Regular";
-    font-size: 12px;
+    font-size: 15px;
     vertical-align:middle;
     color:white
 }
@@ -130,7 +99,7 @@ html, body {
 }
 .menu-header-text {
     font-family: "AvenirNext-Bold";
-    font-size: 12px;
+    font-size: 15px;
     color: white;
 }
 .menu-text {
@@ -234,19 +203,18 @@ html, body {
 .accordion {
     z-index: 2;
     margin-left: 1rem;
-    
+    font-family: "AvenirNext-Bold";
     border-radius: 5px;
     position: relative;
     background-color: green;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    padding: 6px;
+    padding: 10px;
     width: 700px;
     border: none;
     text-align: left;
     outline: none;
-    font-family: "AvenirNext-Bold";
     font-size: 12px;
     transition: 0.4s;
   }
@@ -274,13 +242,15 @@ html, body {
     border-radius: 5px;
     background-color: green;
     font-family: "AvenirNext-Regular";
+    font-size: 12px;
     color: white;
     padding: 0 18px;
     max-height: 0;
     width: 700px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    font-size: 12px;
+    text-decoration: none;
+    text-align: left;
   }
 
   .SPARQL-input{
@@ -303,7 +273,7 @@ html, body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 6px 10px;
+    padding: 10px 10px;
     transition: 0.3s;
     font-size: 12px;
     font-family: "AvenirNext-Bold";
@@ -341,7 +311,7 @@ html, body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 6px 10px;
+    padding: 10px 10px;
     transition: 0.3s;
     font-size: 12px;
     font-family: "AvenirNext-Bold";
@@ -373,8 +343,7 @@ html, body {
   textarea {
     border-color: transparent;
     background-image: linear-gradient(white,#E2F0D9);
-    font-size: 12px;
-    font-family: "AvenirNext-Regular"
+
   }
 
   input[type=button],
@@ -385,7 +354,7 @@ html, body {
         border: none;
         color: #fff;
         font-size: 12px;
-        padding: 6px 10px;
+        padding: 10px 10px;
         font-family: "AvenirNext-Bold";
         color: white;
         cursor: pointer;
@@ -394,12 +363,16 @@ html, body {
 
     .options-button {
         background-color: inherit;
+        float: left;
         border: none;
-        padding: 6px 10px;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 10px;
         transition: 0.3s;
         font-size: 12px;
         font-family: "AvenirNext-Regular";
         color: white;
+        vertical-align: middle;
 
     }
     .options-button:hover {
@@ -412,7 +385,7 @@ html, body {
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 6px 10px;
+        padding: 10px 10px;
         transition: 0.3s;
         font-size: 12px;
         font-family: "AvenirNext-Regular";
@@ -447,71 +420,7 @@ html, body {
 }
 
 
-
-.switch {
-    position: relative;
-
-    display: inline-block;
-    width: 40px;
-    height: 18px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    border-radius: 10px;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    border-radius: 50%;
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 2px;
-    bottom: 2px;
-    background-color: rgb(255, 255, 255);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #ff0072;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #ff0072;
-  }
-  
-  input:checked + .slider:before {
-    background-color: white;
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-  }
-
 a {
-    text-decoration: none;
-    font-family: "AvenirNext-Regular";
-    font-size: 12px;
     color: white;
-}
-
-a:hover {
-    color:#ff0072;
+    text-decoration: none;
 }
