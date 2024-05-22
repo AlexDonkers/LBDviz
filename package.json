@@ -4,7 +4,9 @@
   "description": "-",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "update-ifcjs": "npm i web-ifc-three@latest && npm i && copy-wasm",
+    "copy-wasm": "cpy node_modules/web-ifc/web-ifc.wasm . && cpy node_modules/web-ifc/web-ifc-mt.wasm ."
   },
   "author": "",
   "license": "MIT",
@@ -24,6 +26,7 @@
     "@influxdata/influxdb-client-browser": "^1.27.0",
     "@rollup/plugin-json": "^4.1.0",
     "cors": "^2.8.5",
+    "cpy-cli": "^5.0.0",
     "dxf-writer": "^1.15.1",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
