@@ -98,7 +98,7 @@ html, body {
     vertical-align:middle;
 }
 .menu-header-text {
-    font-family: "AvenirNext-Bold";
+    font-family: "AvenirNext-Regular";
     font-size: 15px;
     color: white;
 }
@@ -203,7 +203,7 @@ html, body {
 .accordion {
     z-index: 2;
     margin-left: 1rem;
-    font-family: "AvenirNext-Bold";
+    font-family: "AvenirNext-Regular";
     border-radius: 5px;
     position: relative;
     background-color: green;
@@ -276,7 +276,7 @@ html, body {
     padding: 10px 10px;
     transition: 0.3s;
     font-size: 12px;
-    font-family: "AvenirNext-Bold";
+    font-family: "AvenirNext-Regular";
     color: white;
   }
   
