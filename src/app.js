@@ -20,7 +20,7 @@ viewer.shadowDropper.darkness = 1.5;
 
 //viewer.IFC.setWasmPath("./");
 
-await ifcLoader.ifcManager.setWasmPath("./")
+await ifcLoader.ifcManager.setWasmPath("../LBDVIZ/")
 
 viewer.IFC.loader.ifcManager.applyWebIfcConfig({
     USE_FAST_BOOLS: true,
