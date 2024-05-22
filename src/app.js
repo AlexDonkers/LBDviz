@@ -18,7 +18,7 @@ const viewer = new IfcViewerAPI({ container, backgroundColor: new Color('#E2F0D9
 viewer.axes.setAxes();
 viewer.shadowDropper.darkness = 1.5;
 
-//viewer.IFC.setWasmPath("./");
+viewer.IFC.setWasmPath("../LBDVIZ/");
 
 await ifcLoader.ifcManager.setWasmPath("../LBDVIZ/")
 
