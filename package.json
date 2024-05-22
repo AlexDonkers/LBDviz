@@ -4,9 +4,7 @@
   "description": "-",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "update-ifcjs": "npm i web-ifc-three@latest && npm i && copy-wasm",
-    "copy-wasm": "cpy node_modules/web-ifc/web-ifc.wasm . && cpy node_modules/web-ifc/web-ifc-mt.wasm ."
+    "build": "webpack"
   },
   "author": "",
   "license": "MIT",
@@ -26,16 +24,15 @@
     "@influxdata/influxdb-client-browser": "^1.27.0",
     "@rollup/plugin-json": "^4.1.0",
     "cors": "^2.8.5",
-    "cpy-cli": "^5.0.0",
     "dxf-writer": "^1.15.1",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "stats.js": "^0.17.0",
-    "three": "^0.149.0",
+    "three": "^0.135.0",
     "three-mesh-bvh": "^0.5.5",
     "web-ifc": "0.0.35",
-    "web-ifc-three": "0.0.125",
-    "web-ifc-viewer": "^1.0.218"
+    "web-ifc-three": "0.0.117",
+    "web-ifc-viewer": "^1.0.192"
   }
 }
